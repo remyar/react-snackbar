@@ -1,6 +1,6 @@
 {
   "name": "@remyar/react-snackbar",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "author": "Remy ARNAUDIN <remy.arnaudin@wanadoo.fr>",
   "license": "MIT",
   "description": "Snackbar Provider for react",
