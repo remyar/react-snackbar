@@ -1,0 +1,35 @@
+{
+  "name": "@remyar/react-snackbar",
+  "version": "0.0.1",
+  "author": "Remy ARNAUDIN <remy.arnaudin@wanadoo.fr>",
+  "license": "MIT",
+  "description": "Snackbar Provider for react",
+  "homepage": "https://github.com/remyar/react-snackbar",
+  "main": "dist/index.js",
+  "source": "src/index.js",
+  "scripts": {
+    "build": "microbundle --no-compress --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react/jsx-runtime=jsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remyar/react-snackbar"
+  },
+  "bugs": {
+    "url": "https://github.com/remyar/react-snackbar/issues"
+  },
+  "keywords": [
+    "snackbar",
+    "react",
+    "provider"
+  ],
+  "peerDependencies": {
+    "microbundle": "^0.15.1",
+    "@mui/material": "^6.1.1",
+    "react": ">=18.0.0"
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.1",
+    "@mui/material": "^6.1.1",
+    "react": ">=18.0.0"
+  }
+}
