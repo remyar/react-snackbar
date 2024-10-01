@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import withSnackBar from './withSnackBar';
 import ReactSnackBarContext from './context';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
 function SnackbarProvider(props) {
-    const [snackbar, setSnackbar] = useState({ open: false });
+    const [snackbar, setSnackbar] = React.useState({ open: false });
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {

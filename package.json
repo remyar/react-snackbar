@@ -1,6 +1,6 @@
 {
   "name": "@remyar/react-snackbar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Remy ARNAUDIN <remy.arnaudin@wanadoo.fr>",
   "license": "MIT",
   "description": "Snackbar Provider for react",
@@ -8,7 +8,7 @@
   "main": "dist/index.js",
   "source": "src/index.js",
   "scripts": {
-    "build": "microbundle --no-compress --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react/jsx-runtime=jsx"
+    "build": "microbundle --no-compress --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react/jsx-runtime=jsx,react=React,react-dom=ReactDOM"
   },
   "repository": {
     "type": "git",
@@ -24,12 +24,12 @@
   ],
   "peerDependencies": {
     "microbundle": "^0.15.1",
-    "@mui/material": "^6.1.1",
+    "@mui/material": ">=6.1.1",
     "react": ">=18.0.0"
   },
   "devDependencies": {
     "microbundle": "^0.15.1",
-    "@mui/material": "^6.1.1",
+    "@mui/material": ">=6.1.1",
     "react": ">=18.0.0"
   }
 }
