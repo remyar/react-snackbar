@@ -56,6 +56,7 @@ function SnackbarProvider(props) {
             onClose={handleClose}
         >
             <Alert
+                onClose={snackbar.autoHideDuration === null ? handleClose : undefined}
                 severity={snackbar.severity}
                 variant="filled"
                 sx={{ width: '100%' }}
