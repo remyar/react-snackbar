@@ -15,27 +15,31 @@ function SnackbarProvider(props) {
         setSnackbar({ ...snackbar, open: false });
     };
 
-    function _setMessage(message, severity) {
+    function _setMessage(message, severity, autoHideDuration) {
+        if (autoHideDuration === undefined) {
+            autoHideDuration = 5000;
+        }
         setSnackbar({
             open: true,
             message: message,
-            severity: severity
+            severity: severity,
+            autoHideDuration: autoHideDuration
         })
     }
-    function _error(messageKey) {
-        _setMessage(messageKey, "error");
+    function _error(messageKey, autoHideDuration) {
+        _setMessage(messageKey, "error", autoHideDuration);
     }
 
-    function _warning(messageKey) {
-        _setMessage(messageKey, "warning");
+    function _warning(messageKey, autoHideDuration) {
+        _setMessage(messageKey, "warning", autoHideDuration);
     }
 
-    function _success(messageKey) {
-        _setMessage(messageKey, "success");
+    function _success(messageKey, autoHideDuration) {
+        _setMessage(messageKey, "success", autoHideDuration);
     }
 
-    function _info(messageKey) {
-        _setMessage(messageKey, "info");
+    function _info(messageKey, autoHideDuration) {
+        _setMessage(messageKey, "info", autoHideDuration);
     }
 
     return <ReactSnackBarContext.Provider value={{
@@ -48,7 +52,7 @@ function SnackbarProvider(props) {
     }}>
         <Snackbar
             open={snackbar.open}
-            autoHideDuration={5000}
+            autoHideDuration={snackbar.autoHideDuration}
             onClose={handleClose}
         >
             <Alert
